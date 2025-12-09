@@ -24,7 +24,9 @@ test('001: E2E: Search -> Select Ticket -> Checkout', async ({ page }) => {
   await page.waitForLoadState('networkidle');
   await results.waitForResults();
   await results.selectFirstTicket();
-  await page.waitForLoadState('networkidle');
+  await page.waitForSelector('[data-tag="passenger-details"]', {
+    timeout: 15000,
+  });
   await acceptCookiesIfPresent(page);
 
   const passenger = passengerFactory();
