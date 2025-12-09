@@ -1,0 +1,24 @@
+{
+  "name": "airbus-tests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test:happyflow": "npx playwright test tests/e2e/TC001_booking_happy_flow.spec.ts",
+    "test:happyflow:debug": "npx playwright test tests/e2e/TC001_booking_happy_flow.spec.ts --debug",
+    "test:e2e": "playwright test tests/e2e",
+    "test:regression": "playwright test tests/regression",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.18"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.9.0"
+  }
+}
